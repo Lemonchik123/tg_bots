@@ -29,7 +29,7 @@ for user in track(users,
     for message in messages:
         try:
             #print(user, message)#выводит юзер и сообщение юзеру
-            app.send_message(user, message)
+            app.send_message(user, message, parse_mode="HTML")
         
         except Exception as error:
             console.print(f'[bold red]ERROR[/]: {error}')
